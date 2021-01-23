@@ -1,0 +1,250 @@
+/* by default browser has put some values,we want to change values accordingly.
+*- means for every element in the page have this padding margin and box-sizing
+*/
+*,*::before,*::after
+{
+    margin:0;
+    padding:0;
+    box-sizing:inherit;
+    
+    font-family: 'Cabin', sans-serif;
+
+    font-size:14px;
+    
+}
+html{
+box-sizing:border-box;
+}
+.hero-section-desktop
+{
+    display:grid;
+    grid-template-columns:1fr 1fr ;
+    padding:0 70px;
+}
+.hero-section-desktop .btn
+{
+    text-align:left;
+    font-size:16px;
+    margin-bottom:48px;
+    line-height:50px;
+
+} 
+.hero-section-desktop h1
+{
+    text-align:left;
+    font-size:50px;
+    margin-bottom:48px;
+    line-height:1.25;
+}
+.hero-section-desktop p
+{
+    text-align:left;
+    line-height:1.5;
+    margin-bottom:48px;
+}
+.hero-section-desktop img
+{
+    width:100%;
+    
+}
+
+@media  (min-width:500px)
+{
+    *{
+    font-size:16px;
+    }
+}
+header 
+{
+    background:white;
+    box-shadow:0 0 4px 2px #ddd;
+    position: fixed;/*but this akes h1 to be invisible to avoid it use a div tag right after the header section*/
+    width: 100%;
+    /*to make header (nav bar sticky means even as i scroll down i need to be able to see the header*/
+    
+}
+.clear
+{
+    height:50px;/*since header nav has a height of 54px add another 54px to make that div section to be visible one px gets hide another one makes our code to be visible.*/
+}
+header nav
+{
+    height:54px;
+    
+    display:flex;
+    /*drop the elements in the flex box and then align them in center according to your wish use justify content-space between while using this technique also use div tag*/
+    align-items:center;
+    padding:0 2.5%;
+    justify-content:space-between;
+    border-bottom:1px solid #ddd;
+}
+.mr-auto
+{
+    margin-right:auto;
+}
+a
+{
+    display:inline-block;
+    /*display inline-block means: */
+    text-decoration :none;
+    color: #666;
+    /* inherit the color of the container*/
+}
+a:hover
+{
+    color:black;
+}
+
+.container-fluid
+{
+    padding-right:auto;
+    padding-left:auto;
+    margin-right:auto;
+    margin-left:auto;
+    
+}
+header img
+{
+    height:34px;
+
+}
+
+footer img
+{
+    height:50px;
+}
+.btn
+{
+    color:white;
+    background:#1a73e8;
+    padding:0 24px;
+    font-size:14px;
+    line-height:36px;
+    border-radius:4px;
+    letter-spacing:0.75px;
+    font-weight:600;
+}
+.btn:hover
+{
+    color:white;
+    background:#174ea6;
+
+}
+.gmail-logo-text
+{
+    font-size:24px;
+    color:#777;
+    margin-left: 8px;
+    font-weight:600;
+}
+footer ul
+{
+    display:flex;
+    list-style:none;
+    
+}
+footer li
+{
+    margin-right:16px;
+}
+footer >*
+{
+    margin:32px 16px;
+}
+footer select
+{
+    margin-left: 16px;
+    border:none;
+    background-color: #ddd;
+    padding: 8px;
+    width: 120px;
+}
+footer
+{
+    margin:30px 16px;
+    background-color: #f8f8f8;
+}
+.help-icon
+{
+    color: white;
+    font-weight: 600;
+    background: black;
+    height: 20px;
+    width:20px;
+    display:inline-block;
+    text-align:center;
+    border-radius: 80px;
+    margin-right: 2px;
+
+}
+
+
+/*section*/
+section
+{
+    padding:32px 24px;
+    /*text-align:center   *for image center  or use flex display so that they become horizontally flexible*/
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+h1,h2
+{
+    font-size:33px;
+    color:#222;
+    font-weight:600;
+    text-align:center;
+    margin:22px 0;
+    letter-spacing:0.5px;
+}
+h1{
+    font-size:36px;
+}
+p
+{
+    text-align:center;
+    margin:12px 0;
+}
+.hero-section,.avoid-suspicious,.never-drop-the-ball
+{
+    background: #f8f8f8;
+
+}
+.get-gmail img 
+{
+   height:50px; 
+}
+.get-gmail .btn
+{
+    line-height:40px;
+}
+.experience-gmail-section img
+{
+    
+    height:40px;
+    
+
+}
+.devices-section img
+{
+    width:85%;
+}
+.never-drop-the-ball{
+    margin:5px 0;
+}
+@media(min-width:500px)
+{
+    .mobile-only
+    {
+        display:none;
+    }
+.desktop-only
+{
+    display:block;
+}
+.hero-section-desktop
+{
+    display:grid;
+}
+}
